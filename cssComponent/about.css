@@ -1,0 +1,108 @@
+
+.aboutWrapper {
+    width: 100%;
+}
+.aboutHero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://engage4more.com/blog/wp-content/uploads/2022/03/Top-50-Standup-Comedians-booked-for-LIVE-events-in-India-engage4more-1.jpeg);
+}
+.aboutHeading {
+    font-size: 8vw;
+    color: var(--second-color);
+}
+.missionAndAbout, .showsAndContact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 20px;
+    /* align-items: center;
+    justify-content: center; */
+    padding: 60px;
+}
+.mission, .shows {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 2px rgb(159, 159, 159);
+    border-radius: 5px;
+    line-height: 1.5;
+}
+.mission h2 {
+    /* margin-bottom: 10px; */
+}
+.about-us, .Aboutcontact {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    line-height: 1.5;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgb(159, 159, 159);
+}
+.Aboutcomedians {
+    padding: 0 60px;
+}
+.ArtistProfileWrapper {
+    width: 100%;
+    height: max-content;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    /* margin-top: 20px; */
+}
+.artistCard {
+    width: max-content;
+    height: max-content;
+    margin-right: 10px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+/* .Artists h4 {
+    white-space: nowrap;
+} */
+.artistCard .Artists img {
+    width: clamp(50px, 8vw, 200px);
+    height: clamp(50px, 8vw, 200px);
+    flex-shrink: 0;
+    /* width: 10vw;
+    height: 10vw; */
+    border-radius: 50%;
+    overflow: hidden;
+    object-fit: cover;
+}
+.Artists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1vw;
+    box-shadow: 0 0 4px rgb(202, 201, 201);
+    background-color: var(--second-color);
+    border-radius: 5px;
+    height: clamp(100px , 13vw, 400px);
+    transition: 0.2s ease-in-out;
+}
+.Artists:hover{
+    transform: translateY(-10px);
+}
+.artistCardName {
+    margin-top: 10px;
+    width: 10vw;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+}
+.ArtistProfileWrapper::-webkit-scrollbar {
+    width: 0;
+}

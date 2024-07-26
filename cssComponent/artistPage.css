@@ -1,0 +1,47 @@
+.artistPage {
+    display: flex;
+    flex-direction: column;
+}
+.artistHeader {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid grey;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    position: sticky;
+    top: 50px;
+    background-color: var(--second-color);
+    z-index: 999999;
+}
+.ArtistImage {
+    background-color: rgb(13, 110, 195);
+    width: clamp(120px, 10vw, 12vw);
+    height: clamp(120px, 10vw, 12vw);
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 3vw;
+    flex-shrink: 0;
+}
+.ArtistImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ArtistInfo {
+    display: flex;
+    flex-direction: column;
+}
+.belongsTo, .followersCount {
+    font-size: var(--label);
+    line-height: 1.5;
+}
+.followButton {
+    margin-bottom: 0;
+}
+#artistVideos{
+  display: grid;
+grid-template-columns: repeat(4, 1fr);  
+}

@@ -1,0 +1,139 @@
+.playerpageWrapper {
+    display: flex;
+    justify-content: flex-start;
+    /* width: 100%; */
+}
+.playerpageContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.playerWrapper {
+    position: relative;
+    /* width: 55vw; */
+    height: 34vw;
+    background-color: #000;
+    border-radius: 5px;
+    overflow: hidden;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
+}
+.commentSection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* background-color: red; */
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.commentDividerLine {
+    width: 100%;
+    margin: 10px 0;
+    height: 2px;
+    background-color: rgb(216, 216, 216);
+}
+.playerWrapper video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+/* Style for controls overlay (if any) */
+.controls-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the control buttons */
+.control-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 10px;
+}
+
+.control-button:hover {
+    color: #ff0;
+}
+.playingVideoDetails {
+    display: flex;
+    /* width: 60vw; */
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px 0;
+    border-bottom: 2px solid rgb(177, 177, 177);
+    padding-bottom: 20px;
+}
+.playingVideoDetailsContent {
+    width: 30vw;
+}
+.playingVideoDetailsContentOther {
+    font-size: var(--label);
+}
+.ArtistNameAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    width: 60vw;
+    color: var(--background-color);
+    /* margin-top: 10px; */
+    /* background-color: #eaeaea; */
+}
+.ArtistNameAndButton img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--background-color);
+
+}
+.ArtistNameAndButton h3 {
+    margin: 0 50px 0 10px;
+}
+.playingVideoDetailsButtons button {
+    background: none;
+    border: 2px solid var(--main-color);
+    font-weight: 500;
+    color: var(--background-color);
+}
+.playingVideoDetailsButtons button:hover {
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+.playerDesc {
+    width: 60vw;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+.moreFromArtist {
+    width: 60vw;
+    height: max-content;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    align-items: center;
+    overflow-x: scroll;
+    position: relative;
+    padding-top: 30px;
+}
+.moreFromArtist::-webkit-scrollbar {
+    width: 0;
+}
+.moreFromArtistHeading{
+    position: absolute;
+    top: 0;
+    margin: 10px 0;
+}

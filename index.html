@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="./cssComponent/home.css">
+   <link rel="stylesheet" href="./cssComponent/card.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="sidebar"></div>
+    <div class="homeWrapper">
+        <section class="hero">
+            <h1 class="heroHeading">
+                Welcome to LAUGHHUB
+            </h1>
+            <h3>
+                Your go-to destination for the best standup comedy videos!
+            </h3>
+            <p>From classic standup routines to the latest comedy specials, LaughHub has it all. Sit back, relax, and get ready to laugh until your sides hurt!</p>
+        <button>Watch Now</button>
+        </section>
+        <section class="homeContent">
+            <div class="titles">
+                <h2>Recently Played</h2>
+                <a href="history.html">View all</a>
+            </div>
+            <div class="recentlyPlayed" id="recentlyPlayed"></div>
+        </section>
+        <section class="homeContent">
+            <div class="titles">
+                <h2>Trending</h2>
+                <a href="trending.html">View all</a>
+            </div>
+            <div class="trending" id="trending"></div>
+        </section>
+        <section class="homeContent">
+            <div class="titles">
+                <h2>New Releases</h2>
+                <a href="newRelease.html">View all</a>
+            </div>
+            <div class="newRelease" id="newRelease"></div>
+        </section>
+        <section class="topComedians">
+            <div class="titles">
+                <h2>Top Comedians</h2>
+            </div>
+            <div class="ArtistProfileWrapper" id="ArtistProfileWrapper"></div>
+        </section>
+        <section class="infiniteCover">
+            <h2>All videos</h2>
+            <div class="infinite" id="infinite"></div>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+    <script>
+        loadComponent('header', 'components/header.html');
+        loadComponent('sidebar', 'components/sidebar.html');
+        
+        // Fetch movies data from the JSON file
+        fetch('Data.json')
+            .then(response => response.json())
+            .then(data => {
+                const recentlyPlayed = document.getElementById('recentlyPlayed');
+                data.forEach(movie => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                    <div class="CardOptions">
+            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+        </div>
+                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        
+                         <span class="headingandOptiondots">
+        <h3 class="card-title">${movie.title}</h3>
+        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="release-date">${movie.release}</span>
+                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+
+                    `;
+                   
+                   recentlyPlayed.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching movies data:', error));
+
+            //fetch and map data in trending section
+            fetch('Data.json')
+            .then(response => response.json())
+            .then(data => {
+                const trending = document.getElementById('trending');
+                data.forEach(movie => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                    <div class="CardOptions">
+            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+        </div>
+                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        
+                         <span class="headingandOptiondots">
+        <h3 class="card-title">${movie.title}</h3>
+        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="release-date">${movie.release}</span>
+                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+
+                    `;
+                   trending.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching movies data:', error));
+
+            
+            //fetch and map data in new release section
+            fetch('Data.json')
+            .then(response => response.json())
+            .then(data => {
+                const newRelease = document.getElementById('newRelease');
+                data.forEach(movie => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                   <div class="CardOptions">
+            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+        </div>
+                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        
+                         <span class="headingandOptiondots">
+        <h3 class="card-title">${movie.title}</h3>
+        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="release-date">${movie.release}</span>
+                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+
+                    `;
+                    newRelease.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching movies data:', error));
+
+            //fetch and map artist into ArtistProfileWrapper
+            fetch('artist.json')
+            .then(response => response.json())
+            .then(artistData => {
+                const ArtistProfileWrapper = document.getElementById('ArtistProfileWrapper');
+                artistData.forEach(artist => {
+                    const artistCard = document.createElement('div');
+                    artistCard.className = 'artistCard';
+                    artistCard.innerHTML = `
+                    <div class="Artists" onClick="navigateToArtist()">
+                        <img src="${artist.image}" alt="${artist.name}">
+                        <h3 class="artistCardName">${artist.name}</h3>
+                        </div>`;
+                        ArtistProfileWrapper.appendChild(artistCard);
+                });
+            })
+             //fetch and map data in new infinite section
+             fetch('Data.json')
+            .then(response => response.json())
+            .then(data => {
+                const infinite = document.getElementById('infinite');
+                data.forEach(movie => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                   <div class="CardOptions">
+            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+        </div>
+                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        
+                         <span class="headingandOptiondots">
+        <h3 class="card-title">${movie.title}</h3>
+        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="release-date">${movie.release}</span>
+                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+
+                    `;
+                    infinite.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching movies data:', error));
+    </script>
+    <script src="https://kit.fontawesome.com/8f218c5ee4.js" crossorigin="anonymous"></script>
+</body>
+</html>

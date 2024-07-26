@@ -1,0 +1,88 @@
+.card {
+    border-radius: 5px;
+    margin:1vw 1vw;
+    width: 20vw;
+    height: 19vw;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+.CardOptions {
+    position: absolute;
+    width: 100%;
+    border-radius: 5px;
+    height: 11vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+.card:hover .CardOptions {
+    opacity: 1;
+}
+.otherOptions {
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    color: var(--second-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cardOptionsIcon {
+    font-size: 18px;
+}
+.card img {
+    width: 100%;
+    border-radius: 5px;
+    height: 11vw;
+    object-fit: cover;
+}
+
+.card-title {
+    /* font-size: 18px; */
+    /* margin: 0.1vw 0; */
+    width: 85%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.release-date, .view-and-likes{
+    font-size: clamp(9px,1vw, 12px);
+    /* color: var(--background-color); */
+}
+.view-and-likes {
+    font-weight: 600;
+}
+.view-and-likes span {
+    margin-right: 10px;
+}
+.Author span {
+    margin-left: 10px;
+    font-size: var(--label);
+}
+.headingandOptiondots {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Author {
+    font-size: clamp(9px, 1.7vw, 16px);
+
+}
+/* @media screen and (max-width:1050px) {
+    .card {
+        height: 20vw;
+    }
+} */

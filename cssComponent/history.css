@@ -1,0 +1,13 @@
+.HistoryWrapper {
+    width: 100%;
+    height: max-content;
+    background-color: var(--second-color);
+}
+.HistoryTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.HistoryTitle a {
+    text-decoration: 1px underline var(--background-color);
+}

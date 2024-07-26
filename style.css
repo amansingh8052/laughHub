@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+:root {
+    --main-color:#FFA500;
+    --second-color:#F8F8F8;
+    --background-color: #2D2D2D;
+    --label: 12px;
+    --heading:24px;
+}
+body {
+    background-color: var(--second-color);
+
+}
+button {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--main-color);
+    color: var(--second-color);
+    padding: 6px 20px;
+    border: 2px solid var(--main-color);
+    margin: 10px 0;
+}
+section {
+    padding: 60px 60px 0 60px;
+    background-color: var(--second-color);
+    color: var(--background-color);
+}
+h2 {
+    font-size: clamp(18px, 2vw, 24px);
+}
+h3 {
+    font-size: clamp(10px, 1.7vw, 18px);
+}
+
+.infinite, .searchCardWrapper, .history {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

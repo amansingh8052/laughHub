@@ -1,0 +1,108 @@
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* background-color: var(--second_color); */
+}
+.profileUpper{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid grey;
+    padding-bottom: 20px;
+    margin-bottom: 50px;
+}
+.profileImage {
+    background-color: rgb(13, 110, 195);
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 3vw;
+    flex-shrink: 0;
+}
+.profileImage img {
+    width: 100%;
+    height: 100%;
+    transition: 0.2s ease-in-out;
+}
+.profileImage img:hover {
+    transform: scale(1.1);
+}
+.userdetailsAndButton {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+}
+.nameOfUser {
+    font-size: var(--heading);
+}
+.subscriptionPlan {
+    padding: 5px;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    margin: 2px 0;
+    font-size: var(--label);
+}
+.timeDuration {
+    font-size: 18px;
+    font-weight: 500;
+}
+.status {
+    font-size: var(--label);
+}
+.userButtons {
+    display: flex;
+    flex-direction: column;
+}
+.editProfile {
+    background-color: transparent;
+    border: 2px solid var(--background-color);
+    color: var(--background-color);
+    transition: 0.1s ease-in-out;
+}
+.LogOut {
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+    transition: 0.1s ease-in-out;
+}
+.editProfile:hover {
+    background-color: var(--background-color);
+    color: var(--second-color);
+}
+.LogOut:hover {
+    background-color: red;
+    color: var(--second-color);
+}
+.profileContent {
+    padding: 0;
+}
+.recentlyPlayed {
+    width: 100%;
+    height: max-content;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    
+}
+.recentlyPlayed::-webkit-scrollbar {
+    width: 0;
+}
+.titles {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* margin-bottom: 10px; */
+}
+.titles a {
+    text-decoration: 1px solid var(--background-color) underline;
+    text-underline-offset: 2px;
+    color: var(--background-color);
+}

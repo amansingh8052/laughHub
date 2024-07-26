@@ -1,0 +1,30 @@
+.SearchpageWrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--second-color);
+}
+.filterOptions {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 50px;
+    justify-content: flex-start;
+    background-color: var(--second-color);
+    z-index: 99999;
+}
+.filterOptions .filters {
+    font-size: var(--label);
+    color: var(--background-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 2px solid var(--background-color);
+    margin-right: 10px;
+}
+.filterOptions .filters:hover {
+    background-color: rgb(223, 222, 222);
+}
+.searchpageheader {
+    height: 40px;
+}

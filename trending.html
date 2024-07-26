@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./cssComponent/history.css">
+    <link rel="stylesheet" href="./cssComponent/card.css">
+</head>
+<body>
+    <div id="header"></div>
+    <div id="sidebar"></div>
+    <section class="HistoryWrapper">
+        <div class="HistoryTitle">
+            <h2>Trending</h2>
+        </div>
+        <div class="history" id="history"></div>
+    </section>
+    <script src="scripts.js"></script>
+    <script>
+        loadComponent('header', 'components/header.html');
+        loadComponent('sidebar', 'components/sidebar.html');
+         //fetching and mapping the trending items
+         fetch('Data.json')
+            .then(response => response.json())
+            .then(data => {
+                const history = document.getElementById('history');
+                data.forEach(movie => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                    <div class="CardOptions">
+            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+        </div>
+                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        
+                         <span class="headingandOptiondots">
+        <h3 class="card-title">${movie.title}</h3>
+        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="release-date">${movie.release}</span>
+                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+
+                    `;
+                    history.appendChild(card);
+                });
+            })
+            .catch(error => console.error('Error fetching movies data:', error));
+            const clearAll = document.getElementById('clearAll');
+        clearAll.addEventListener('click', (e) => {
+            e.preventDefault();
+            const history = document.getElementById('history');
+            while (history.firstChild) {
+                history.removeChild(history.firstChild);
+            }
+        });
+            </script>
+    <script src="https://kit.fontawesome.com/8f218c5ee4.js" crossorigin="anonymous"></script>
+</body>
+</html>

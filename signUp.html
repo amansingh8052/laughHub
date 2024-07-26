@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./cssComponent/login.css">
+</head>
+<body>
+    <!-- <div id="header"></div> -->
+    <!-- <div id="sidebar"></div> -->
+   <div class="loginPage">
+    <div class="loginImage"></div>
+    <div class="loginCover">
+        <div class="loginInnerCover">
+            <a href="index.html" class="closeButton"><i class="loginClose fa-solid fa-xmark"></i></a>
+        <form action="" id="signUpForm" class="loginForm" method="post">
+           
+            <h3 class="loginHead">Sign Up</h3>
+            <div class="inputContainer">
+                <input type="text">
+                <label for="input">Mobile No. / Email</label>
+            </div>
+            <div class="inputContainer">
+                <input type="text">
+                <label for="input">Password</label>
+            </div>
+            <div class="inputContainer">
+                <input type="text">
+                <label for="input">Confirm Password</label>
+            </div>
+            <!-- <a href="" class="forgetPassword">Forget Password ?</a> -->
+            <button class="loginButton">Sign Up</button>
+            <span class="dontHaveAccount">Already a member <a href="login.html">Login</a></span>
+        </form>
+        </div>
+    </div>
+   </div>
+    <script src="scripts.js"></script>
+    <script>
+        // loadComponent('header', 'components/header.html');
+        loadComponent('sidebar', 'components/sidebar.html');
+        const signUp = (e) => {
+    e.preventDefault();
+    // Your sign-up logic here
+    console.log('Form submission prevented');
+};
+
+document.getElementById('signUpForm').addEventListener('submit', signUp);
+    </script>
+    <script src="https://kit.fontawesome.com/8f218c5ee4.js" crossorigin="anonymous"></script>
+</body>
+</html>

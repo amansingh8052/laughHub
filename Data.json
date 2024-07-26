@@ -1,0 +1,133 @@
+[
+    {
+        "title": "Laugh Out Loud - Episode 1",
+        "description": "Description for Movie 1",
+         "poster": "https://hips.hearstapps.com/hmg-prod/images/best-standup-comedy-on-netflix-64d285ff26f83.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 2",
+        "description": "Description for Movie 2",
+        "poster": "https://i.ytimg.com/vi/Cl618XVFKmc/maxresdefault.jpg",
+        "release": "Released on 28 May 2024",
+        "views":"999",
+        "likes":"1M",
+        "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 3",
+        "description": "Description for Movie 3",
+         "poster": "https://i.ytimg.com/vi/RgcJSr0mQVs/hqdefault.jpg",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    }
+    ,
+    {
+        "title": "Laugh Out Loud - Episode 2",
+        "description": "Description for Movie 2",
+        "poster": "https://i.ytimg.com/vi/Y_x0sbPdHHw/maxresdefault.jpg",
+        "release": "Released on 28 May 2024",
+        "views":"999",
+        "likes":"1M",
+        "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 3",
+        "description": "Description for Movie 3",
+         "poster": "https://i.ytimg.com/vi/f78QONdqk1M/hqdefault.jpg",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    }
+    ,
+    {
+        "title": "Laugh Out Loud - Episode 2",
+        "description": "Description for Movie 2",
+        "poster": "https://i.ytimg.com/vi/uV34Y-7Rwbs/sddefault.jpg",
+        "release": "Released on 28 May 2024",
+        "views":"999",
+        "likes":"1M",
+        "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 3",
+        "description": "Description for Movie 3",
+         "poster": "https://i.ytimg.com/vi/SZ-wwwkhel0/maxresdefault.jpg",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    },
+    
+    {
+        "title": "Laugh Out Loud - Episode 1",
+        "description": "Description for Movie 1",
+         "poster": "https://hips.hearstapps.com/hmg-prod/images/best-standup-comedy-on-netflix-64d285ff26f83.jpg?crop=0.888888888888889xw:1xh;center,top&resize=1200:*",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 2",
+        "description": "Description for Movie 2",
+        "poster": "https://i.ytimg.com/vi/Cl618XVFKmc/maxresdefault.jpg",
+        "release": "Released on 28 May 2024",
+        "views":"999",
+        "likes":"1M",
+        "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 3",
+        "description": "Description for Movie 3",
+         "poster": "https://i.ytimg.com/vi/RgcJSr0mQVs/hqdefault.jpg",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    }
+    ,
+    {
+        "title": "Laugh Out Loud - Episode 2",
+        "description": "Description for Movie 2",
+        "poster": "https://i.ytimg.com/vi/Y_x0sbPdHHw/maxresdefault.jpg",
+        "release": "Released on 28 May 2024",
+        "views":"999",
+        "likes":"1M",
+        "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 3",
+        "description": "Description for Movie 3",
+         "poster": "https://i.ytimg.com/vi/f78QONdqk1M/hqdefault.jpg",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    }
+    ,
+    {
+        "title": "Laugh Out Loud - Episode 2",
+        "description": "Description for Movie 2",
+        "poster": "https://i.ytimg.com/vi/uV34Y-7Rwbs/sddefault.jpg",
+        "release": "Released on 28 May 2024",
+        "views":"999",
+        "likes":"1M",
+        "Author":"John Doe"
+    },
+    {
+        "title": "Laugh Out Loud - Episode 3",
+        "description": "Description for Movie 3",
+         "poster": "https://i.ytimg.com/vi/SZ-wwwkhel0/maxresdefault.jpg",
+         "release": "Released on 28 May 2024",
+         "views":"999",
+         "likes":"1M",
+         "Author":"John Doe"
+    }
+]

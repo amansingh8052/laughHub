@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Standup Comedy</title>
+    <link rel="stylesheet" href="./cssComponent/about.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="aboutWrapper">
+    <div class="aboutHero">
+        <h1 class="aboutHeading">About LaughHub</h1>
+    </div>
+    <main>
+        <div class="missionAndAbout">
+        <div class="mission">
+            <h2>Our Mission</h2>
+            <p>Welcome to LaughHub, where laughter is our business! Our mission is to bring joy, humor, and entertainment to audiences around the world. We believe in the power of comedy to connect people and brighten their days.</p>
+        </div>
+        
+        <div class="about-us">
+            <h2>Who We Are</h2>
+            <p>Founded in 2024, LaughHub is a premier destination for standup comedy. Our team is dedicated to curating the best comedic talent and providing a platform for both established and emerging comedians to showcase their skills. We host a variety of shows, events, and special performances to ensure there’s always something for everyone.</p>
+        </div>
+    </div>
+    
+        <div class="Aboutcomedians">
+            <h2>Meet Our Comedians</h2>
+            <div class="ArtistProfileWrapper" id="ArtistProfileWrapper"></div>
+                
+        </div>
+        <div class="showsAndContact">
+        <div class="shows">
+            <h2>Our Shows</h2>
+            <p>We offer a wide range of standup shows, from intimate club performances to large theater events. Our calendar is packed with upcoming shows, special events, and festivals. Whether you’re a longtime fan of standup or new to the scene, our shows promise an unforgettable experience filled with laughter.</p>
+        </div>
+
+        <div class="Aboutcontact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, comments, or would like to get involved, feel free to reach out to us at <a href="mailto:info@standupcomedy.com">info@standupcomedy.com</a>. We love hearing from our audience and are always here to help.</p>
+        </div>
+    </div>
+    </main>
+</div>
+   <div id="footer"></div>
+   <script src="scripts.js"></script>
+    <script>  
+        loadComponent('footer', 'components/footer.html');
+    
+    //fetch and map artist into ArtistProfileWrapper
+        fetch('artist.json')
+        .then(response => response.json())
+        .then(artistData => {
+            const ArtistProfileWrapper = document.getElementById('ArtistProfileWrapper');
+            artistData.forEach(artist => {
+                const artistCard = document.createElement('div');
+                artistCard.className = 'artistCard';
+                artistCard.innerHTML = `
+                <div class="Artists" onClick="navigateToArtist()">
+                    <img src="${artist.image}" alt="${artist.name}">
+                    <h3 class="artistCardName">${artist.name}</h3>
+                    </div>`;
+                    ArtistProfileWrapper.appendChild(artistCard);
+            });
+        }) </script>
+</body>
+</html>
