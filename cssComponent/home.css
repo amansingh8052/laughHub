@@ -106,7 +106,7 @@
     box-shadow: 0 0 4px rgb(202, 201, 201);
     background-color: var(--second-color);
     border-radius: 5px;
-    height: clamp(85px , 13vw, 400px);
+    height: clamp(100px , 13vw, 400px);
     transition: 0.2s ease-in-out;
 }
 .Artists:hover{
@@ -131,6 +131,12 @@
 @media screen and (max-width:800px) {
     .homeContent, .topComedians, .infiniteCover{
         padding: 0 3vw;
+    }
+   
+}
+@media screen and (max-width:500px) {
+    .Artists {
+        padding: 2vw;
     }
    
 }

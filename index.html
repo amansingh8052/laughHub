@@ -97,26 +97,26 @@
             .then(data => {
                 const trending = document.getElementById('trending');
                 data.forEach(movie => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                    <div class="CardOptions">
-            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
-            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
-            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
-            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+                    const smallcard = document.createElement('div');
+                    smallcard.className = 'smallcard';
+                    smallcard.innerHTML = `
+                    <div class="smallCardOptions">
+            <button class="smallwatchNow" onclick="navigateToPlayer()"><i class="smallcardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="smallotherOptions"><i class="smallcardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="smallotherOptions"><i class="smallcardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="smallotherOptions"><i class="smallcardOptionsIcon fa-solid fa-share"></i></span>
         </div>
-                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        <img class="smallcard-Image" src="${movie.poster}" alt="${movie.title}">
                         
-                         <span class="headingandOptiondots">
-        <h3 class="card-title">${movie.title}</h3>
-        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
-                        <span class="release-date">${movie.release}</span>
-                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
-                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+                         <span class="smallheadingandOptiondots">
+        <h3 class="smallcard-title">${movie.title}</h3>
+        <i class=" smallcardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="smallrelease-date">${movie.release}</span>
+                        <div class="smallview-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="smallAuthor">${movie.Author}<span>1M followers</span> </h4>
 
                     `;
-                   trending.appendChild(card);
+                   trending.appendChild(smallcard);
                 });
             })
             .catch(error => console.error('Error fetching movies data:', error));
@@ -128,26 +128,26 @@
             .then(data => {
                 const newRelease = document.getElementById('newRelease');
                 data.forEach(movie => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                   <div class="CardOptions">
-            <button class="watchNow" onclick="navigateToPlayer()"><i class="cardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
-            <span class="otherOptions"><i class="cardOptionsIcon fa-regular fa-square-plus"></i></span>
-            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-arrow-down"></i></span>
-            <span class="otherOptions"><i class="cardOptionsIcon fa-solid fa-share"></i></span>
+                    const smallcard = document.createElement('div');
+                    smallcard.className = 'smallcard';
+                    smallcard.innerHTML = `
+                   <div class="smallCardOptions">
+            <button class="smallwatchNow" onclick="navigateToPlayer()"><i class="smallcardOptionsIcon fa-solid fa-play"></i> Watch Now</button>
+            <span class="smallotherOptions"><i class="smallcardOptionsIcon fa-regular fa-square-plus"></i></span>
+            <span class="smallotherOptions"><i class="smallcardOptionsIcon fa-solid fa-arrow-down"></i></span>
+            <span class="smallotherOptions"><i class="smallcardOptionsIcon fa-solid fa-share"></i></span>
         </div>
-                        <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
+                        <img class="smallcard-Image" src="${movie.poster}" alt="${movie.title}">
                         
-                         <span class="headingandOptiondots">
-        <h3 class="card-title">${movie.title}</h3>
-        <i class=" cardOption fa-solid fa-ellipsis-vertical"></i></span>
-                        <span class="release-date">${movie.release}</span>
-                        <div class="view-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
-                         <h4 class="Author">${movie.Author}<span>1M followers</span> </h4>
+                         <span class="smallheadingandOptiondots">
+        <h3 class="smallcard-title">${movie.title}</h3>
+        <i class=" smallcardOption fa-solid fa-ellipsis-vertical"></i></span>
+                        <span class="smallrelease-date">${movie.release}</span>
+                        <div class="smallview-and-likes"><span>${movie.views} Views</span><span>${movie.likes} Likes</span></div>
+                         <h4 class="smallAuthor">${movie.Author}<span>1M followers</span> </h4>
 
                     `;
-                    newRelease.appendChild(card);
+                    newRelease.appendChild(smallcard);
                 });
             })
             .catch(error => console.error('Error fetching movies data:', error));
