@@ -26,18 +26,32 @@ button {
     margin: 10px 0;
 }
 section {
-    padding: 60px 60px 0 60px;
+    padding: 60px 3vw 0 60px;
     background-color: var(--second-color);
     color: var(--background-color);
+    overflow-x: hidden;
 }
 h2 {
     font-size: clamp(18px, 2vw, 24px);
 }
 h3 {
-    font-size: clamp(10px, 1.7vw, 18px);
+    font-size: clamp(16px, 1.7vw, 18px);
 }
 
 .infinite, .searchCardWrapper, .history {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+}
+@media screen and (max-width:800px){
+    section {
+        padding: 60px 3vw 50px 3vw;
+    }
+    .infinite, .searchCardWrapper, .history {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width:500px){
+    .infinite, .searchCardWrapper, .history {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

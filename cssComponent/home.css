@@ -25,7 +25,7 @@
     height: max-content;
     display: flex;
     flex-direction: column;
-    padding: 0 60px;
+    padding: 0 3vw 0 60px;
     align-items: flex-end;
 }
 .titles {
@@ -106,7 +106,7 @@
     box-shadow: 0 0 4px rgb(202, 201, 201);
     background-color: var(--second-color);
     border-radius: 5px;
-    height: clamp(100px , 13vw, 400px);
+    height: clamp(85px , 13vw, 400px);
     transition: 0.2s ease-in-out;
 }
 .Artists:hover{
@@ -126,4 +126,11 @@
 }
 .infiniteCover {
     padding: 0 60px;
+    width: 100%;
+}
+@media screen and (max-width:800px) {
+    .homeContent, .topComedians, .infiniteCover{
+        padding: 0 3vw;
+    }
+   
 }
