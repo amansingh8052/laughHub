@@ -2,7 +2,7 @@
     border-radius: 5px;
     margin:1vw 1vw;
     width: 20vw;
-    height: 19vw;
+    height: max-content;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     transition: transform 0.2s;
     flex-shrink: 0;
@@ -42,57 +42,66 @@
 .smallcardOptionsIcon {
     font-size: 18px;
 }
-.smallcard img {
+.smallcard-Image {
     width: 100%;
     border-radius: 5px;
     height: 11vw;
     object-fit: cover;
 }
-
-.smallcard-title {
-    /* font-size: 18px; */
-    /* margin: 0.1vw 0; */
-    width: 85%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+.smallcardProfileWrapper {
+    display: flex;
+    align-items: flex-start;
 }
-
-.smallrelease-date, .view-and-likes{
-    font-size: clamp(9px,1vw, 12px);
-    /* color: var(--background-color); */
-}
-.smallview-and-likes {
-    font-weight: 600;
-    font-size: var(--label);
-
-}
-.smallview-and-likes span {
+.smallcardProfileWrapper img {
+    width: clamp(20px,3vw,100px);
+    height:clamp(20px,3vw,100px);
+    border-radius: 50%;
+    object-fit: cover;
     margin-right: 10px;
+    background-color: red;
 }
-.smallAuthor span {
-    margin-left: 10px;
-    font-size: var(--label);
+.smallcard-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits the text to two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em; /* Adjust based on your desired line height */
+    max-height: 2.4em; /* 2 lines * line-height */
+    word-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    font-weight: 600;
+    margin: 0.1vw 0;
+    width: 95%;
+}
+.smallvidDetails {
+    font-size: clamp(9px,0.9vw,12px);
+}
+.smallcardDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .smallheadingandOptiondots {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.smallAuthor {
-    font-size: clamp(9px, 1.7vw, 16px);
-
+.smallcardOption {
+    font-size: 20px;
 }
 @media screen and (max-width:800px) {
     .smallcard {
         width: 28vw;
         height: 27vw;
     }
-    .smallcard img{
+    .smallcard-Image{
         height: 14vw;
     }
 }
-@media screen and (max-width:800px) {
+
+@media screen and (max-width:500px) {
     .smallcard {
         width: 45vw;
         height: 27vw;

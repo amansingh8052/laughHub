@@ -2,7 +2,7 @@
     border-radius: 5px;
     margin:1vw 1vw;
     width: 20vw;
-    height: 19vw;
+    height: max-content;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     transition: transform 0.2s;
     flex-shrink: 0;
@@ -42,51 +42,61 @@
 .cardOptionsIcon {
     font-size: 18px;
 }
-.card img {
+.card-Image {
     width: 100%;
     border-radius: 5px;
     height: 11vw;
     object-fit: cover;
 }
-
-.card-title {
-    /* font-size: 18px; */
-    /* margin: 0.1vw 0; */
-    width: 85%;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
+.cardProfileWrapper {
+    display: flex;
+    align-items: flex-start;
 }
-
-.release-date, .view-and-likes{
-    font-size: clamp(9px,1vw, 12px);
-    /* color: var(--background-color); */
-}
-.view-and-likes {
-    font-weight: 600;
-}
-.view-and-likes span {
+.cardProfileWrapper img {
+    width: clamp(20px,3vw,100px);
+    height:clamp(20px,3vw,100px);
+    border-radius: 50%;
+    object-fit: cover;
     margin-right: 10px;
+    background-color: red;
 }
-.Author span {
-    margin-left: 10px;
-    font-size: var(--label);
+.card-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limits the text to two lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2em; /* Adjust based on your desired line height */
+    max-height: 2.4em; /* 2 lines * line-height */
+    word-wrap: break-word;
+    white-space: normal;
+    width: 100%;
+    font-weight: 600;
+    margin: 0.1vw 0;
+    width: 95%;
+}
+.vidDetails {
+    font-size: clamp(9px,0.9vw,12px);
+}
+.cardDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .headingandOptiondots {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.Author {
-    font-size: clamp(9px, 1.7vw, 16px);
-
+.cardOption {
+    font-size: 20px;
 }
 @media screen and (max-width:800px) {
     .card {
         width: 28vw;
         height: 27vw;
     }
-    .card img{
+    .card-Image{
         height: 14vw;
     }
 }
@@ -95,7 +105,7 @@
         width: 100%;
         height: 300px;
     }
-    .card img{
+    .card-Image{
         height: 200px;
     }
 }
