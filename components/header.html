@@ -5,9 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../cssComponent/header.css">
+    <!-- <link rel="stylesheet" href="../cssComponent/header.css"> -->
 </head>
 <body>
+    <style>
+    header {
+        width: 100%;
+        background-color: var(--background-color);
+        color: #fff;
+        padding: 0 60px;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        z-index: 99999999;
+        overflow: hidden;
+    }
+    
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 24px;
+        color: var(--main-color);
+    }
+    
+    .logo .highlight {
+        color: #fff; /* White color for 'HUB' */
+    }
+    
+    .search-bar {
+        display: flex;
+        align-items: center;
+        margin: 0 20px;
+        width: 50%;
+        position: relative;
+    }
+    
+    .search-bar input {
+        width: 100%;
+        padding: 8px;
+        border: none;
+        border-radius: 5px;
+    }
+    .search-bar input:focus {
+        border:  3px solid var(--main-color);
+        outline: none;
+    }
+    .search-bar button {
+        position: absolute;
+        right: 0;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        background-color: var(--main-color);
+        color: var(--background-color);
+        cursor: pointer;
+    }
+    
+    .search-bar button:hover {
+        background-color: #FF8C00;
+    }
+    .header-options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header-options a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 20px;
+        text-decoration: none;
+        color: var(--second-color);
+        background-color: var(--second-color);
+        border-radius: 50%;
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        position: relative;
+    }
+    .headerProfile {
+        width: 100%;
+        height: 100%;
+    }
+    .header-options a:hover {
+        border: 2px solid var(--main-color);
+    }
+    .header-options .notificationIcon {
+        font-size: 20px;
+        color: var(--background-color);
+    }
+    .headerSignup, .headerLogin {
+        margin-left: 20px;
+        border-radius: 5px;
+        background-color: var(--main-color);
+        color: var(--second-color);
+        padding: 8px 20px;
+        border: 2px solid var(--main-color);
+        text-decoration: none;
+        font-size: 12px;
+    }
+    .headerLogin {
+        background: transparent;
+        border: 2px solid var(--main-color);
+        color: var(--second-color);
+        transition: 0.1s ease-in-out;
+    }
+    .headerLogin:hover {
+        background: var(--main-color);
+    }
+    .headerSignup:hover {
+        background: transparent;
+        border:2px solid var(--main-color);
+    }
+    
+    /* Footer css */
+    
+    .profileFooter {
+        width: 100%;
+        height: max-content;
+        padding: 40px 60px;
+        margin-top: 50px;
+        background-color: var(--background-color);
+        display: grid;
+        grid-template-columns:repeat(3,1fr);
+        grid-template-rows: repeat(3 , 1fr);
+        row-gap: 10px;
+        font-size: var(--label);
+        /* place-items: center; */
+    }
+    .footerContent {
+        text-decoration: none;
+        color: var(--second-color);
+    
+    }
+    .footerContent:hover {
+        color: var(--main-color);
+        text-decoration: underline 1px solid var(--main-color);
+    }</style>
 <header>
 <div class="header-container">
         <div class="logo">LAUGH<span class="highlight">HUB</span></div>

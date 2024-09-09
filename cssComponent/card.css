@@ -1,6 +1,6 @@
 .card {
     border-radius: 5px;
-    margin:1vw 1vw;
+    margin:1vw;
     width: 20vw;
     height: max-content;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
@@ -53,12 +53,11 @@
     align-items: flex-start;
 }
 .cardProfileWrapper img {
-    width: clamp(20px,3vw,100px);
-    height:clamp(20px,3vw,100px);
+    width: clamp(50px,3vw,100px);
+    height:clamp(50px,3vw,100px);
     border-radius: 50%;
     object-fit: cover;
     margin-right: 10px;
-    background-color: red;
 }
 .card-title {
     display: -webkit-box;
@@ -103,7 +102,7 @@
 @media screen and (max-width:500px) {
     .card {
         width: 100%;
-       
+        margin:3vw 1vw;
     }
     .card-Image{
         height: 200px;

@@ -90,11 +90,9 @@
     white-space: nowrap;
 } */
 .artistCard .Artists img {
-    width: clamp(50px, 8vw, 200px);
-    height: clamp(50px, 8vw, 200px);
+    width: clamp(70px, 8vw, 200px);
+    height: clamp(70px, 8vw, 200px);
     flex-shrink: 0;
-    /* width: 10vw;
-    height: 10vw; */
     border-radius: 50%;
     overflow: hidden;
     object-fit: cover;
@@ -107,7 +105,7 @@
     box-shadow: 0 0 4px rgb(202, 201, 201);
     background-color: var(--second-color);
     border-radius: 5px;
-    height: clamp(100px , 13vw, 400px);
+    height: max-content;
     transition: 0.2s ease-in-out;
 }
 .Artists:hover{
@@ -133,11 +131,15 @@
     .homeContent, .topComedians, .infiniteCover{
         padding: 0 3vw;
     }
-   
+    .artistCardName {
+        width: 15vw;
+    }
 }
 @media screen and (max-width:500px) {
     .Artists {
         padding: 2vw;
     }
-   
+    .artistCardName {
+        width: 23vw;
+    }
 }
