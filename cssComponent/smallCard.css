@@ -94,14 +94,16 @@
 @media screen and (max-width:800px) {
     .smallcard {
         width: 28vw;
-        height: 27vw;
     }
     .smallcard-Image{
-        height: 14vw;
+        height: 17vw;
+    }
+    .smallcardProfileWrapper {
+        display: none;
     }
 }
 
-@media screen and (max-width:500px) {
+/* @media screen and (max-width:500px) {
     .smallcard {
         width: 45vw;
         height: 27vw;
@@ -109,7 +111,5 @@
     .smallcard img{
         height: 27vw;
     }
-    .smallheadingandOptiondots, .smallcardOption,.smallrelease-date,.smallview-and-likes,.smallAuthor {
-        display: none;
-    }
-}
+  
+} */

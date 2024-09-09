@@ -40,6 +40,7 @@
     text-decoration: 1px solid var(--background-color) underline;
     text-underline-offset: 2px;
     color: var(--background-color);
+    font-size: var(--label);
 }
 .recentlyPlayed, .trending, .newRelease {
     width: 100%;

@@ -70,15 +70,15 @@
             smallcard.className = 'smallcard';
             smallcard.onclick = navigateToPlayer;
             smallcard.innerHTML = `
-                <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
-                <div class="cardProfileWrapper">
+                <img class="smallcard-Image" src="${movie.poster}" alt="${movie.title}">
+                <div class="smallcardProfileWrapper">
                     <img src="${movie.image}" alt="">
-                    <div class="cardDetails">
-                        <span class="headingandOptiondots">
-                            <h3 class="card-title">${movie.title}</h3>
-                            <i class="cardOption fa-solid fa-ellipsis-vertical"></i>
+                    <div class="smallcardDetails">
+                        <span class="smallheadingandOptiondots">
+                            <h3 class="smallcard-title">${movie.title}</h3>
+                            <i class="smallcardOption fa-solid fa-ellipsis-vertical"></i>
                         </span>
-                        <span class="vidDetails">${movie.Author} | ${movie.views} Views | ${movie.release}</span>
+                        <span class="smallvidDetails">${movie.Author} | ${movie.views} Views | ${movie.release}</span>
                     </div>
                 </div>
             `;
@@ -98,15 +98,15 @@
             smallcard.className = 'smallcard';
             smallcard.onclick = navigateToPlayer;
             smallcard.innerHTML = `
-                <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
-                <div class="cardProfileWrapper">
+                <img class="smallcard-Image" src="${movie.poster}" alt="${movie.title}">
+                <div class="smallcardProfileWrapper">
                     <img src="${movie.image}" alt="">
-                    <div class="cardDetails">
-                        <span class="headingandOptiondots">
-                            <h3 class="card-title">${movie.title}</h3>
-                            <i class="cardOption fa-solid fa-ellipsis-vertical"></i>
+                    <div class="smallcardDetails">
+                        <span class="smallheadingandOptiondots">
+                            <h3 class="smallcard-title">${movie.title}</h3>
+                            <i class="smallcardOption fa-solid fa-ellipsis-vertical"></i>
                         </span>
-                        <span class="vidDetails">${movie.Author} | ${movie.views} Views | ${movie.release}</span>
+                        <span class="smallvidDetails">${movie.Author} | ${movie.views} Views | ${movie.release}</span>
                     </div>
                 </div>
             `;
@@ -126,15 +126,15 @@
             smallcard.className = 'smallcard';
             smallcard.onclick = navigateToPlayer;
             smallcard.innerHTML = `
-                <img class="card-Image" src="${movie.poster}" alt="${movie.title}">
-                <div class="cardProfileWrapper">
+                <img class="smallcard-Image" src="${movie.poster}" alt="${movie.title}">
+                <div class="smallcardProfileWrapper">
                     <img src="${movie.image}" alt="">
-                    <div class="cardDetails">
-                        <span class="headingandOptiondots">
-                            <h3 class="card-title">${movie.title}</h3>
-                            <i class="cardOption fa-solid fa-ellipsis-vertical"></i>
+                    <div class="smallcardDetails">
+                        <span class="smallheadingandOptiondots">
+                            <h3 class="smallcard-title">${movie.title}</h3>
+                            <i class="smallcardOption fa-solid fa-ellipsis-vertical"></i>
                         </span>
-                        <span class="vidDetails">${movie.Author} | ${movie.views} Views | ${movie.release}</span>
+                        <span class="smallvidDetails">${movie.Author} | ${movie.views} Views | ${movie.release}</span>
                     </div>
                 </div>
             `;
@@ -187,5 +187,6 @@
     .catch(error => console.error('Error fetching movies data:', error));
     </script>
     <script src="https://kit.fontawesome.com/8f218c5ee4.js" crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>

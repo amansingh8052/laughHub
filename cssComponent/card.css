@@ -94,18 +94,18 @@
 @media screen and (max-width:800px) {
     .card {
         width: 28vw;
-        height: 27vw;
+        /* height: 27vw; */
     }
     .card-Image{
-        height: 14vw;
+        height: 17vw;
     }
 }
 @media screen and (max-width:500px) {
     .card {
         width: 100%;
-        height: 300px;
+       
     }
     .card-Image{
-        height: 200px;
+        height: 270px;
     }
 }
