@@ -93,10 +93,10 @@
 }
 @media screen and (max-width:800px) {
     .smallcard {
-        width: 28vw;
+        width: 30vw;
     }
     .smallcard-Image{
-        height: 17vw;
+        height: 19vw;
     }
     .smallcardProfileWrapper {
         display: none;
